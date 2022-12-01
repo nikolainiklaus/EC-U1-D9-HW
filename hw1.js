@@ -48,9 +48,9 @@ console.log("-------------------------3--------------------------------");
 
 function crazyDiff(int3, int4 = 19) {
     if (int3 > 19) {
-        return (int3-19)*3; 
+        return (Math.abs(int3-19))*3; 
     } else {
-        return int3-19;
+        return Math.abs(int3-19);
     }
 }
 
