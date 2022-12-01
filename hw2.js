@@ -5,6 +5,8 @@
  The function should return the sum of just the numbers bigger than 5.
 */
 
+console.log("-------------------------1--------------------------------");
+
 
 function giveMeRandom(n) {
     let array = [];
@@ -40,6 +42,7 @@ console.log(checkArray(randomArray));
  Create a function called "shoppingCartTotal" which calculates the total due to the shop.
 */
 
+console.log("-------------------------2--------------------------------");
 
 let shoppingCart = [
     {
@@ -73,6 +76,8 @@ console.log("total Cost:", totalCost(shoppingCart));
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "addToShoppingCart" which receives a new object, adds it to shoppingCart and returns the total number of items in the shoppingCart.
 */
+
+console.log("-------------------------3--------------------------------");
 
 let newItem = shoppingCart[1]; 
 
