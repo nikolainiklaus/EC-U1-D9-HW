@@ -5,21 +5,88 @@
  The function should return the sum of just the numbers bigger than 5.
 */
 
-/* WRITE YOUR ANSWER HERE */
+
+function giveMeRandom(n) {
+    let array = [];
+    for (let index = 0; index < n; index++) {
+        temp = Math.floor(Math.random() * 11);
+        array.push(temp);
+    } 
+    return array
+}
+
+let randomArray = giveMeRandom(8);
+console.log("random array: ", randomArray);
+
+function checkArray(randomArray) {
+    let sumArray = 0;
+    for (let index = 0; index < randomArray.length; index++) {
+        let number = randomArray[index];
+        if (number > 5) {
+            console.log(number, "is greater than 5");
+            sumArray += number;
+        } else {
+            console.log(number, "is lower than 5");
+        }
+    }
+    return sumArray;
+}
+
+console.log(checkArray(randomArray));
+
 
 /* EXTRA 2
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "shoppingCartTotal" which calculates the total due to the shop.
 */
 
-/* WRITE YOUR ANSWER HERE */
+
+let shoppingCart = [
+    {
+        price: 120,
+        name: "phone",
+        quantity: 2,
+        id: 1231,
+    },
+
+    {
+        price: 240,
+        name: "computer",
+        quantity: 3,
+        id: 1231,
+    }
+]
+
+function totalCost(shoppingCart) {
+    let tempCost = 0;
+    for (let index = 0; index < shoppingCart.length; index++) {
+        product_cost = shoppingCart[index].price;
+        quantity = shoppingCart[index].quantity;
+        tempCost += quantity * product_cost
+    }
+    return tempCost; 
+}
+
+console.log("total Cost:", totalCost(shoppingCart));
 
 /* EXTRA 3
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "addToShoppingCart" which receives a new object, adds it to shoppingCart and returns the total number of items in the shoppingCart.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let newItem = shoppingCart[1]; 
+
+function addToShoppingCart(newItem) {
+    shoppingCart.push(newItem);
+    let finalQuantity = 0;
+    for (let index = 0; index < shoppingCart.length; index++) {
+        quantity = shoppingCart[index].quantity;
+        finalQuantity += quantity; 
+    }
+    return finalQuantity; 
+}
+
+console.log("total quantity: ", addToShoppingCart(newItem));
 
 /* EXTRA 4
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
