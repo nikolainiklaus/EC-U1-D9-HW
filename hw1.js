@@ -62,7 +62,7 @@ console.log(crazyDiff(20));
 console.log("-------------------------4--------------------------------");
 
 function boundary(n, int5 = 20, int6 = 100, int7 = 400) {
-    if ((n >= int5 && n <= int6) || n === int7) {
+    if ((n > int5 && n <= int6) || n === int7) {
         return true;
     } else {
         return false;
@@ -79,7 +79,7 @@ console.log("-------------------------5--------------------------------");
 
 
 function strivify(str) {
-    if (str.includes("Strive")) {
+    if (str.startsWith("Strive")) {
         return `${str}`
     } else {
         return  `Strive ${str}`
